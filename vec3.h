@@ -166,10 +166,16 @@ inline vec3 unit_vector(vec3 v)
 vec3 random_in_unit_sphere()
 {
     vec3 p;
+    int test = 0;
     do {
         p = 2.0*vec3(dis(gen), dis(gen), dis(gen)) - vec3(1.0, 1.0, 1.0);
+        ++test;
+        
+        if(test > 50)
+            std::cout << "MECAGONSATAN\n";
+            
     }
-    while( dot(p, p) >= 1.0);
+    while( dot(p, p) >= 1.0 );
     
     return p;
 }

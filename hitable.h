@@ -17,8 +17,7 @@ class hitable
 {
     public:
         virtual bool hit(const ray &r, float tmin, float tmax, hit_record &rec) const = 0;
-        
-        virtual ~hitable() {}
+        virtual ~hitable() {};
 };
 
 #endif // __HITABLE_H__
