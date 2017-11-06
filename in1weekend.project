@@ -16,6 +16,9 @@
     <File Name="hitablelist.h"/>
     <File Name="camera.h"/>
     <File Name="material.h"/>
+    <File Name="lambertian.h"/>
+    <File Name="metal.h"/>
+    <File Name="rangen.h"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
