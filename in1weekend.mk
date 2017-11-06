@@ -5,18 +5,18 @@
 ## Debug
 ProjectName            :=in1weekend
 ConfigurationName      :=Debug
-WorkspacePath          :=C:/WorkSpace/in1weekend
-ProjectPath            :=C:/WorkSpace/in1weekend
+WorkspacePath          :=C:/Develop/in1weekend
+ProjectPath            :=C:/Develop/in1weekend
 IntermediateDirectory  :=./obj
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
-User                   :=aLFoNSo
+User                   :=kbaedal
 Date                   :=06/11/2017
-CodeLitePath           :="C:/Archivos de programa/CodeLite"
-LinkerName             :=C:/TDM-GCC-32/bin/g++.exe
-SharedObjectLinkerName :=C:/TDM-GCC-32/bin/g++.exe -shared -fPIC
+CodeLitePath           :="C:/Program Files/CodeLite"
+LinkerName             :=C:/TDM-GCC-64/bin/g++.exe
+SharedObjectLinkerName :=C:/TDM-GCC-64/bin/g++.exe -shared -fPIC
 ObjectSuffix           :=.o
 DependSuffix           :=.o.d
 PreprocessSuffix       :=.i
@@ -36,7 +36,7 @@ ObjectsFileList        :="in1weekend.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=makedir
 RcCmpOptions           := 
-RcCompilerName         :=C:/TDM-GCC-32/bin/windres.exe
+RcCompilerName         :=C:/TDM-GCC-64/bin/windres.exe
 LinkOptions            :=  
 IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). 
 IncludePCH             := 
@@ -49,20 +49,19 @@ LibPath                := $(LibraryPathSwitch).
 ## Common variables
 ## AR, CXX, CC, AS, CXXFLAGS and CFLAGS can be overriden using an environment variables
 ##
-AR       := C:/TDM-GCC-32/bin/ar.exe rcu
-CXX      := C:/TDM-GCC-32/bin/g++.exe
-CC       := C:/TDM-GCC-32/bin/gcc.exe
+AR       := C:/TDM-GCC-64/bin/ar.exe rcu
+CXX      := C:/TDM-GCC-64/bin/g++.exe
+CC       := C:/TDM-GCC-64/bin/gcc.exe
 CXXFLAGS :=  -g -O0 -std=c++14 -Wall $(Preprocessors)
 CFLAGS   :=  -g -O0 -Wall $(Preprocessors)
 ASFLAGS  := 
-AS       := C:/TDM-GCC-32/bin/as.exe
+AS       := C:/TDM-GCC-64/bin/as.exe
 
 
 ##
 ## User defined environment variables
 ##
-CodeLiteDir:=C:\Archivos de programa\CodeLite
-WXWIN:=C:/wx302
+CodeLiteDir:=C:\Program Files\CodeLite
 Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
 
 
@@ -95,7 +94,7 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/WorkSpace/in1weekend/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Develop/in1weekend/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
 

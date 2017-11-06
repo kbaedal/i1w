@@ -23,7 +23,7 @@ vec3 color(const ray &r, hitable *world, int depth)
         ray scattered;
         vec3 attenuation;
         if ( depth < 50 && rec.mat_ptr->scatter(r, rec, attenuation, scattered)) {
-            return attenuation * color(scattered, world, ++depth);
+            return attenuation * color(scattered, world, depth+1);
         }
         else {
             return vec3(0.0, 0.0, 0.0);
@@ -51,8 +51,10 @@ int main()
     
     list[0] = new sphere(vec3(0.0, 0.0, -1.0), 0.5, new lambertian(vec3(0.8, 0.3, 0.3)));
     list[1] = new sphere(vec3(0.0, -100.5, -1.0), 100.0, new lambertian(vec3(0.8, 0.8, 0.0)));
-    list[2] = new sphere(vec3(1.0, 0.0, -1.0), 0.5, new metal(vec3(0.8, 0.6, 0.2)));
-    list[3] = new sphere(vec3(-1.0, 0.0, -1.0), 0.5, new metal(vec3(0.8, 0.8, 0.8)));
+    //list[2] = new sphere(vec3(1.0, 0.0, -1.0), 0.5, new metal(vec3(0.8, 0.6, 0.2)));
+    //list[3] = new sphere(vec3(-1.0, 0.0, -1.0), 0.5, new metal(vec3(0.8, 0.8, 0.8)));
+    list[2] = new sphere(vec3(1.0, 0.0, -1.0), 0.5, new lambertian(vec3(0.0, 0.8, 0.0)));
+    list[3] = new sphere(vec3(-1.0, 0.0, -1.0), 0.5, new lambertian(vec3(0.8, 0.0, 0.0)));
     
     hitable *world = new hitable_list(list, 4);
     
